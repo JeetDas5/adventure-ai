@@ -7,8 +7,8 @@ class StoryJobBase(BaseModel):
     theme: str
 
 
-class StoryJobResponse(StoryJobBase):
-    id: int
+class StoryJobResponse(BaseModel):
+    job_id: str
     status: str
     created_at: datetime
     story_id: Optional[int] = None
