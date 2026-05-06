@@ -23,6 +23,12 @@ app.add_middleware(
     allow_credentials=True,
 )
 
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to Adventure"}
+
+
 app.include_router(story.router, prefix=settings.API_PREFIX, tags=["stories"])
 app.include_router(job.router, prefix=settings.API_PREFIX, tags=["jobs"])
 
