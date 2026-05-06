@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import LoadingStatus from "./loading-status";
 import StoryGame from "./story-game";
-
-const API_BASE_URL = "/api";
+import { API_BASE_URL } from "../util.js";
 
 function StoryLoader() {
   const { id } = useParams();
